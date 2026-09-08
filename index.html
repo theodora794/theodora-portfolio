@@ -495,17 +495,19 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 
 /* ---- film section: consistent wells, click to play, never a broken box ---- */
 .prod-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0 0 24px;padding-top:64px;}
-.film-row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,52px);padding-bottom:70px;border-bottom:1px solid var(--bl);}
+.film-row{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,52px);padding-bottom:70px;border-bottom:1px solid var(--bl);}
 .series-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);padding-bottom:70px;border-bottom:1px solid var(--bl);}
 .wk{min-width:0;}
-.well{position:relative;display:block;width:100%;padding:0;border:1px solid var(--bl);background:var(--mid) center/cover no-repeat;cursor:pointer;overflow:hidden;margin-bottom:22px;}
+.well{position:relative;display:block;width:100%;border:1px solid var(--bl);background:var(--mid);overflow:hidden;margin-bottom:22px;}
 .well.v{aspect-ratio:9/16;max-width:272px;}
 .well.h{aspect-ratio:16/9;}
 .well iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-.well .play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(14,13,11,.42);transition:background .35s ease;}
-.well:hover .play{background:rgba(14,13,11,.24);}
+
+
+
+
 .pmark{width:52px;height:52px;border:1px solid rgba(244,239,230,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--cream);padding-left:3px;transition:border-color .35s ease;}
-.well:hover .pmark{border-color:var(--gold-light);}
+
 .ptxt{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(244,239,230,.6);}
 .wk-link{margin-top:12px;}
 .wk-link a{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--bl);padding-bottom:4px;transition:border-color .3s;}
@@ -663,9 +665,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
           </div>
 
           <span class="vid-label">Campaign trailer</span>
-          <button class="well h" type="button" data-src="https://www.youtube.com/embed/LnUv4SJBFRs?autoplay=1" style="background-image:url('https://img.youtube.com/vi/LnUv4SJBFRs/hqdefault.jpg');" aria-label="Play The Secrets of the English Bar trailer">
-            <span class="play"><span class="pmark">&#9654;</span><span class="ptxt">Play trailer</span></span>
-          </button>
+          <div class="well h"><iframe src="https://www.youtube.com/embed/LnUv4SJBFRs" title="The Secrets of the English Bar trailer" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
           <p class="wk-link" style="margin-top:-10px;"><a href="https://www.youtube.com/watch?v=LnUv4SJBFRs" rel="noopener">Watch on YouTube &rarr;</a></p>
 
           <span class="chapter-mark" id="barFinal">Chapter <b>IV</b> · 2025 · the reopening</span>
@@ -812,12 +812,10 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
 
   <div class="spread">
 
-    <p class="prod-label">Brand films</p>
+    <p class="prod-label">Films &amp; reels</p>
     <div class="film-row">
       <div class="wk">
-        <button class="well v" type="button" data-src="https://player.vimeo.com/video/1191818167?autoplay=1" aria-label="Play The Ballerinas">
-          <span class="play"><span class="pmark">&#9654;</span><span class="ptxt">Play film</span></span>
-        </button>
+        <div class="well v"><iframe src="https://player.vimeo.com/video/1191818167" title="The Ballerinas" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         <span class="wk-year">Christmas 2025</span>
         <h3 class="wk-title wk-m">The Ballerinas</h3>
         <p class="wk-desc">The bellboy sets two ballerinas down as lobby decorations. Once he leaves, they start dancing.</p>
@@ -825,33 +823,35 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
         <p class="wk-link"><a href="https://vimeo.com/1191818167" rel="noopener">Watch on Vimeo &rarr;</a></p>
       </div>
       <div class="wk">
-        <button class="well v" type="button" data-src="https://player.vimeo.com/video/1191819663?autoplay=1" aria-label="Play Love Journey">
-          <span class="play"><span class="pmark">&#9654;</span><span class="ptxt">Play film</span></span>
-        </button>
+        <div class="well v"><iframe src="https://player.vimeo.com/video/1191821929" title="Love Journey" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         <span class="wk-year">Valentine's 2026</span>
         <h3 class="wk-title wk-m"><em>Love Journey</em></h3>
         <p class="wk-desc">A couple moving through the hotel's Valentine's packages.</p>
         <p class="wk-role">Concept &middot; Brief &middot; On-set direction</p>
-        <p class="wk-link"><a href="https://vimeo.com/1191819663" rel="noopener">Watch on Vimeo &rarr;</a></p>
+        <p class="wk-link"><a href="https://vimeo.com/1191821929" rel="noopener">Watch on Vimeo &rarr;</a></p>
       </div>
       <div class="wk">
-        <button class="well v" type="button" data-src="https://player.vimeo.com/video/1191821929?autoplay=1" aria-label="Play Celebrating Women's Day">
-          <span class="play"><span class="pmark">&#9654;</span><span class="ptxt">Play film</span></span>
-        </button>
+        <div class="well v"><iframe src="https://player.vimeo.com/video/1191819663" title="Celebrating Women's Day" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         <span class="wk-year">International Women's Day 2026</span>
         <h3 class="wk-title wk-m">Celebrating <em>Women's Day</em></h3>
         <p class="wk-desc">Built around the International Women's Day 2026 theme.</p>
         <p class="wk-role">Concept &middot; Brief &middot; On-set direction</p>
-        <p class="wk-link"><a href="https://vimeo.com/1191821929" rel="noopener">Watch on Vimeo &rarr;</a></p>
+        <p class="wk-link"><a href="https://vimeo.com/1191819663" rel="noopener">Watch on Vimeo &rarr;</a></p>
+      </div>
+      <div class="wk">
+        <div class="well v"><iframe src="https://www.instagram.com/reel/C_ADFjRI-0j/embed" title="Summer Events Guide" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <span class="wk-year">Summer 2024 &middot; Instagram Reels</span>
+        <h3 class="wk-title wk-m">Summer Events <em>Guide</em></h3>
+        <p class="wk-desc">The Chef Concierge on what is happening in the city that summer, made with the event organisers.</p>
+        <p class="wk-role">Concept &middot; Direction &middot; Partnerships</p>
+        <p class="wk-link"><a href="https://www.instagram.com/reel/C_ADFjRI-0j/" rel="noopener">Watch on Instagram &rarr;</a></p>
       </div>
     </div>
 
     <p class="prod-label">Series &amp; editorial</p>
     <div class="series-row">
       <div class="wk">
-        <button class="well h" type="button" data-src="https://www.youtube.com/embed/47RTwhJO-9M?autoplay=1" style="background-image:url('https://img.youtube.com/vi/47RTwhJO-9M/hqdefault.jpg');" aria-label="Play Why We Love Bucharest">
-          <span class="play"><span class="pmark">&#9654;</span><span class="ptxt">Play film</span></span>
-        </button>
+        <div class="well h"><iframe src="https://www.youtube.com/embed/47RTwhJO-9M" title="Why We Love Bucharest" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         <span class="wk-year">2024 &middot; LinkedIn employer brand</span>
         <h3 class="wk-title wk-l">Why We Love <em>Bucharest</em></h3>
         <p class="wk-metric">61,904 impressions</p>
@@ -860,22 +860,12 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offse
         <p class="wk-link"><a href="https://www.youtube.com/watch?v=47RTwhJO-9M" rel="noopener">Watch on YouTube &rarr;</a></p>
       </div>
       <div class="wk">
-        <button class="well h" type="button" data-src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7290319473180336129?compact=1" aria-label="Play Driven by Passion, Defined by Hospitality">
-          <span class="play"><span class="pmark">&#9654;</span><span class="ptxt">Play film</span></span>
-        </button>
+        <div class="well h"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7290319473180336129?compact=1" title="Driven by Passion, Defined by Hospitality" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
         <span class="wk-year">2025 &middot; LinkedIn department series</span>
         <h3 class="wk-title wk-m">Driven by Passion,<br><em>Defined by Hospitality</em></h3>
         <p class="wk-desc">One colleague per department on what the job actually involves. The first episode is a sales colleague on mental health in the industry.</p>
         <p class="wk-role">Concept &middot; Script &middot; Direction &middot; Series development</p>
         <p class="wk-link"><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7290319473180336129/" rel="noopener">Watch on LinkedIn &rarr;</a></p>
-      </div>
-    </div>
-
-    <div class="one-line">
-      <div>
-        <h3 class="wk-title wk-s">Summer Events <em>Guide</em></h3>
-        <p class="wk-role">Instagram Reels, 2024 &middot; Concept &middot; Direction &middot; Partnerships</p>
-        <p class="wk-link"><a href="https://www.instagram.com/reel/C_ADFjRI-0j/" rel="noopener">Watch on Instagram &rarr;</a></p>
       </div>
     </div>
   </div>
@@ -994,23 +984,6 @@ function tog(id,btn){
   document.querySelectorAll('.tog-btn').forEach(b=>b.classList.remove('open'));
   if(!open){det.style.display='block';btn.classList.add('open');setTimeout(()=>det.scrollIntoView({behavior:'smooth',block:'nearest'}),50);}
 }
-
-
-
-/* Films load on click, so the page never shows an empty or broken player box. */
-document.querySelectorAll('.well').forEach(function(w){
-  w.addEventListener('click',function(){
-    if(w.querySelector('iframe')) return;
-    var f=document.createElement('iframe');
-    f.src=w.dataset.src;
-    f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
-    f.setAttribute('allowfullscreen','');
-    f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
-    f.setAttribute('title','Film');
-    w.innerHTML='';
-    w.appendChild(f);
-  });
-});
 
 /* The English Bar: colour arrives once, as the reader reaches the 2025 chapter. */
 (function(){
